@@ -6,27 +6,86 @@
     <title>Productos | Perfumería Lili</title>
     <link rel="shortcut icon" href="../proyecto/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/7ca7ddeec4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="Logo Perfumería">
+    <header class="header">
+        <a href="index.html">
+            <img class="logo" src="../assets/img/logo.png" alt="Logo Perfumería" loading="lazy">
         </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <nav class="navHeader">
+            <ul class="ulHeader">
+                <li class="listaItem"><a class="linkHerader" href="../index.html">Inicio</a></li>
+                <li class="listaItem"><a class="linkHerader" href="../pages/productos.html">Productos</a></li>
+                <li class="listaItem"><a class="linkHerader" href="../pages/carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="listaItem"><a class="linkHerader" href="../pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-
+        <section class="galeriaGridPerfumes">
+            <div class="contenedorImg carolina">
+                <img src="../assets/img/carolina.jpg" alt="">
+            </div>
+            <div class="contenedorImg dior">
+                <img src="../assets/img/dior.jpg" alt="">
+            </div>
+            <div class="contenedorImg dolce">
+                <img src="../assets/img/dolce.jpg" alt="">
+            </div>
+            <div class="contenedorImg lancome">
+                <img src="../assets/img/lancome.jpg" alt="">
+            </div>
+            <div class="contenedorImg messi">
+                <img src="../assets/img/messi.jpg" alt="">
+            </div>
+            <div class="contenedorImg narciso">
+                <img src="../assets/img/narciso.jpg" alt="">
+            </div>
+        </section>
     </main>
-    <footer>
-        
+    <footer class="colorPrincipal">
+        <a href="index.html">
+            <img class="logo" src="../assets/img/logo.png" alt="Logo Perfumería" loading="lazy">
+        </a>
+        <nav>
+            <h3>Contenidos</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/productos.html">Productos</a></li>
+                <li><a href="../pages/carrito.html">Carrito</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Necesitas Ayuda</h3>
+            <ul>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Aviso de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h3>Suscribite a Nuestro Newsletter</h3>
+            <form action="">
+                <input type="email" placeholder="Correo electrónico" id="emailSuscripcion" name="emailSuscripcion">
+                <input type="submit" value="SUSCRIBIRME">
+            </form>
+        </div>
+        <div>
+            <h3>Contactate Con Nosotros</h3>
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </footer>
 </body>
 </html>

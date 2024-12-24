@@ -1,9 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 h1{
-    font-size: 40px;
+    color: #F5E0FF;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2{
+    padding-top: 25px;
+    color: #330248;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.header{
+    background-color: #510075;
+    color: rgb(225, 225, 225);
+    font-size: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 10vh;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo{
+        width: 80px;
+    }
+
+    nav{
+
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+        a{
+            color: rgb(225, 225, 225);
+            text-decoration: none;
+            font-size: 1.8em;
+        }
+    }
+}
+
+body{
+    background-color: #F5E0FF;
 }
 
 .colorPrincipal{
@@ -11,19 +62,168 @@ h1{
     color: rgb(225, 225, 225);
 }
 
-header, footer{
+.principalIndex{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("../assets/img/imgfondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .contenedorTextoPrincipalIndex{
+        margin: 0 auto;
+        margin-top: 30px;
+        border: 2px solid #F5E0FF;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        width: 50%;
+        font-size: 10px;
+        color: #F5E0FF;
+        backdrop-filter: blur(15px);
+
+        p{
+            font-size: 1.5rem;
+        }
+        a{
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #F5E0FF;
+            font-size: 1.5rem;
+            border: 2px solid #F5E0FF;
+            padding: 8px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.productosDestacados{
+    .galeriaDestacados{
+        padding: 30px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .targetaDestacados{
+            border: 1px solid #510075;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        img{
+            width: 200px;
+        }
+    }
+}
+
+.ubicacion {
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+
+    p{
+        font-size: 1.5rem;
+    }
+    a{
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #510075;
+        font-size: 1.5rem;
+        border: 2px solid #510075;
+        padding: 8px;
+        border-radius: 5px;
+    }
+}
+
+
+/* galeria de pagina PRODUCTOS */
+.galeriaGridPerfumes{
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    /*
+    width: 50%; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "carolina lancome dolce dior"
+                        "messi narciso . .";
+     */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "carolina lancome"
+                        "dolce lancome"
+                        "messi narciso"
+                        "messi dior";
+    
+     gap: 25px;
+    .contenedorImg{
+        width: 100%;
+        height: 100%; 
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .carolina{
+        grid-area: carolina;
+    }
+    .dior{
+        grid-area: dior;
+    }
+    .dolce{
+        grid-area: dolce;
+    }
+    .lancome{
+        grid-area: lancome;
+    }
+    .messi{
+        grid-area: messi;
+    }
+    .narciso{
+        grid-area: narciso;
+    }
+}
+
+
+footer{
     .logo{
         width: 100px;
     }
     ul{
         list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 15px;
+        }
     }
     a{
         color: rgb(225, 225, 225);
         text-decoration: none;
     }
+    
+    .fa-facebook{
+        font-size: 3em;
+    }
+
+    .fa-instagram{
+        font-size: 3em;
+    }
+
     .fa-whatsapp{
         color: #25d366;
-        font-size: 64px;
+        font-size: 5em;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
     }
 }

@@ -9,56 +9,67 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <header class="colorPrincipal">
+    <header class="header">
         <a href="index.html">
             <img class="logo" src="./assets/img/logo.png" alt="Logo Perfumería" loading="lazy">
         </a>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/carrito.html">Carrito</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
+        <nav class="navHeader">
+            <ul class="ulHeader">
+                <li class="listaItem"><a class="linkHerader" href="#">Inicio</a></li>
+                <li class="listaItem"><a class="linkHerader" href="./pages/productos.html">Productos</a></li>
+                <li class="listaItem"><a class="linkHerader" href="./pages/carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="listaItem"><a class="linkHerader" href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="principalIndex">
             <h1>Fragancias Únicas para Cada Momento Especial</h1>
-            <p>Elige entre una amplia selección de aromas para cada ocasión y deja tu huella.</p>
-            <a href="./pages/productos.html">PRODUCTOS</a>
+            <div class="contenedorTextoPrincipalIndex">
+                <p>Elige entre una amplia selección de aromas para cada ocasión y deja tu huella.</p>
+                <a href="./pages/productos.html">PRODUCTOS</a>
+            </div>
         </section>
-        <section>
+        <section class="productosDestacados">
             <h2>NUESTROS PRODUCTOS</h2>
-            <div>
-                <img src="./assets/img/carolina.jpg" alt="Carolina Herrerra" loading="lazy">
-                <h3>Carolina Herrera</h3>
-            </div>
-            <div>
-                <img src="./assets/img/dior.jpg" alt="Dior" loading="lazy">
-                <h3>Dior</h3>
-            </div>
-            <div>
-                <img src="./assets/img/dolce.jpg" alt="Dolce" loading="lazy">
-                <h3>Dolce&Gabbana</h3>
-            </div>
-            <div>
-                <img src="./assets/img/lancome.jpg" alt="Lancome" loading="lazy">
-                <h3>Lancome</h3>
-            </div>
-            <div>
-                <img src="./assets/img/messi.jpg" alt="Messi" loading="lazy">
-                <h3>Messi</h3>
-            </div>
-            <div>
-                <img src="./assets/img/narciso.jpg" alt="Narciso" loading="lazy">
-                <h3>Narciso</h3>
+            <div class="galeriaDestacados">
+                <div class="targetaDestacados">
+                    <img src="./assets/img/carolina.jpg" alt="Carolina Herrerra" loading="lazy">
+                    <h3>Carolina Herrera</h3>
+                </div>
+                <div class="targetaDestacados">
+                    <img src="./assets/img/dior.jpg" alt="Dior" loading="lazy">
+                    <h3>Dior</h3>
+                </div>
+                <div class="targetaDestacados">
+                    <img src="./assets/img/dolce.jpg" alt="Dolce" loading="lazy">
+                    <h3>Dolce&Gabbana</h3>
+                </div>
+                <div class="targetaDestacados">
+                    <img src="./assets/img/lancome.jpg" alt="Lancome" loading="lazy">
+                    <h3>Lancome</h3>
+                </div>
+                <div class="targetaDestacados">
+                    <img src="./assets/img/messi.jpg" alt="Messi" loading="lazy">
+                    <h3>Messi</h3>
+                </div>
+                <div class="targetaDestacados">
+                    <img src="./assets/img/narciso.jpg" alt="Narciso" loading="lazy">
+                    <h3>Narciso</h3>
+                </div>
             </div>
         </section>
-        <section>
+        <section >
             <h2>SIEMPRE CERCA TUYO</h2>
-            <p>Buscá nuestra sucursal más cercana.</p>
-            <a href="./pages/contacto.html">Buscar</a>
+            <div class="ubicacion">
+                <div class="parrafo">
+                    <p>Buscá nuestra sucursal más cercana.</p>
+                    <a href="./pages/contacto.html">Buscar</a>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3641581326856!2d-58.5628052!3d-34.670757599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1735020829743!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="colorPrincipal">
