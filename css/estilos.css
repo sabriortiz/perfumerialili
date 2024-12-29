@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-h1{
+
+h1 {
     color: #F5E0FF;
     font-size: 3rem;
     text-align: center;
 }
 
-h2{
+h2 {
     padding-top: 25px;
     color: #330248;
     font-size: 2rem;
     text-align: center;
 }
 
-.header{
+.header {
     background-color: #510075;
     color: rgb(225, 225, 225);
     font-size: 10px;
@@ -31,38 +33,55 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
-    .logo{
+
+    .logo {
         width: 80px;
     }
 
-    nav{
+    nav {
 
-        ul{
+        ul {
             list-style: none;
-            li{
+
+            li {
                 display: inline-block;
                 margin-right: 15px;
             }
         }
-        a{
+
+        a {
             color: rgb(225, 225, 225);
             text-decoration: none;
             font-size: 1.8em;
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        height: 100%;
+        flex-direction: column;
+        /* esto indica que los divs hijos estaran en columnas */
+        gap: 10px;
+
+        nav {
+            ul {
+                li {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 }
 
-body{
+body {
     background-color: #F5E0FF;
 }
 
-.colorPrincipal{
+.colorPrincipal {
     background-color: #510075;
     color: rgb(225, 225, 225);
 }
 
-.principalIndex{
+.principalIndex {
     padding-top: 50px;
     padding-bottom: 50px;
     background-image: url("../assets/img/imgfondo.jpg");
@@ -74,7 +93,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .contenedorTextoPrincipalIndex{
+
+    .contenedorTextoPrincipalIndex {
         margin: 0 auto;
         margin-top: 30px;
         border: 2px solid #F5E0FF;
@@ -86,10 +106,11 @@ body{
         color: #F5E0FF;
         backdrop-filter: blur(15px);
 
-        p{
+        p {
             font-size: 1.5rem;
         }
-        a{
+
+        a {
             display: inline-block;
             margin-top: 20px;
             text-decoration: none;
@@ -102,22 +123,27 @@ body{
     }
 }
 
-.productosDestacados{
-    .galeriaDestacados{
-        padding: 30px;
+.productosDestacados {
+    .galeriaDestacados {
         margin: 0 auto;
         width: 90%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        .targetaDestacados{
+
+        .targetaDestacados {
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
             border: 1px solid #510075;
             padding: 10px;
             border-radius: 5px;
         }
-        img{
+
+        img {
             width: 200px;
         }
+
     }
 }
 
@@ -126,13 +152,15 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    /* esto indica que los divs hijos estaran en filas */
     justify-content: space-between;
     width: 60%;
 
-    p{
+    p {
         font-size: 1.5rem;
     }
-    a{
+
+    a {
         display: inline-block;
         margin-top: 20px;
         text-decoration: none;
@@ -142,84 +170,202 @@ body{
         padding: 8px;
         border-radius: 5px;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        flex-direction: column;
+
+        /* esto indica que los divs hijos estaran en columnas */
+        .mapa {
+            margin-top: 20px;
+
+            iframe {
+                width: 100%;
+            }
+        }
+    }
 }
 
 
 /* galeria de pagina PRODUCTOS */
-.galeriaGridPerfumes{
+.galeriaGridPerfumes {
     width: 50%;
     margin: 0 auto;
     display: grid;
-    /*
-    width: 50%; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "carolina lancome dolce dior"
-                        "messi narciso . .";
-     */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "carolina lancome"
-                        "dolce lancome"
-                        "messi narciso"
-                        "messi dior";
-    
-     gap: 25px;
-    .contenedorImg{
+        "dolce lancome"
+        "messi narciso"
+        "messi dior";
+
+    gap: 25px;
+
+    .contenedorImg {
         width: 100%;
-        height: 100%; 
-        img{
+        height: 100%;
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    .carolina{
+
+    .carolina {
         grid-area: carolina;
     }
-    .dior{
+
+    .dior {
         grid-area: dior;
     }
-    .dolce{
+
+    .dolce {
         grid-area: dolce;
     }
-    .lancome{
+
+    .lancome {
         grid-area: lancome;
     }
-    .messi{
+
+    .messi {
         grid-area: messi;
     }
-    .narciso{
+
+    .narciso {
         grid-area: narciso;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
+}
+
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.centrado {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    padding: 10%;
+    display: none;
+}
+
+.info {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    color: black;
+    font-size: 140%;
+    top: 10%;
+    left: 10%;
+    width: auto;
+}
+
+.formularioContacto {
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 30px 30px 20px 30px;
+    color: #510075;
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+
+    }
+
+    h1 {
+        color: #510075;
+
+    }
+
+
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    textarea {
+        height: 150px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        padding-top: 15px;
+        width: 100%;
+
+    }
+
+
+    button {
+        height: 45px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        border-style: solid;
+        border-radius: 10px;
+        width: 100%;
+        background-color: #510075;
+        color: #F5E0FF;
+    }
+
+    .aviso {
+        font-size: 13px;
+        color: #0e0e0e;
     }
 }
 
 
-footer{
-    .logo{
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 20px;
+    .logo {
         width: 100px;
     }
-    ul{
+
+    ul {
         list-style: none;
-        li{
+
+        li {
             display: inline-block;
             margin-right: 15px;
         }
     }
-    a{
+
+    a {
         color: rgb(225, 225, 225);
         text-decoration: none;
     }
-    
-    .fa-facebook{
+
+    .fa-facebook {
         font-size: 3em;
     }
 
-    .fa-instagram{
+    .fa-instagram {
         font-size: 3em;
     }
 
-    .fa-whatsapp{
+    .fa-whatsapp {
         color: #25d366;
         font-size: 5em;
         position: fixed;

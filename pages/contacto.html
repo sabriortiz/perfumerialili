@@ -1,32 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Perfumería Lili</title>
     <link rel="shortcut icon" href="../proyecto/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/7ca7ddeec4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
-    <header>
+    <header class="header">
         <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="Logo Perfumería">
+            <img class="logo" src="../assets/img/logo.png" alt="Logo Perfumería">
         </a>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="formulario">
+            <div class="formularioContacto">
+                <div class="formulario">
+                    <h1>Formulario de contacto</h1>
+                    <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+                    <form>
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Nombre
 
+                            </label>
+                            <input type="text" name="introducir_nombre" id="nombre" placeholder="Escribe tu nombre">
+                        </p>
+
+                        <p>
+                            <label for="email" class="colocar_email">Email
+
+                            </label>
+                            <input type="email" name="introducir_email" id="email" placeholder="Escribe tu Email">
+                        </p>
+
+                        <p>
+                            <label for="asunto" class="colocar_asunto">Asunto
+
+                            </label>
+                            <input type="text" name="introducir_asunto" id="asunto" placeholder="Escribe un asunto">
+                        </p>
+
+                        <p>
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+
+                            </label>
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
+                                placeholder="Deja aquí tu comentario..."></textarea>
+                        </p>
+
+                        <button type="submit" name="enviar_formulario" id="enviar">
+                            <p>Enviar</p>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        
+    <footer class="colorPrincipal">
+        <a href="../index.html">
+            <img class="logo" src="../assets/img/logo.png" alt="Logo Perfumería" loading="lazy">
+        </a>
+        <nav>
+            <h3>Contenidos</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/carrito.html">Carrito</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Necesitas Ayuda</h3>
+            <ul>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Aviso de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h3>Suscribite a Nuestro Newsletter</h3>
+            <form action="">
+                <input type="email" placeholder="Correo electrónico" id="emailSuscripcion" name="emailSuscripcion">
+                <input type="submit" value="SUSCRIBIRME">
+            </form>
+        </div>
+        <div>
+            <h3>Contactate Con Nosotros</h3>
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </footer>
 </body>
+<script src="../js/script.js"></script>
+
 </html>
